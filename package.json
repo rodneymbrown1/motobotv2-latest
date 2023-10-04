@@ -13,10 +13,6 @@
     "format:write": "prettier --write \"{app,lib,components}/**/*.{ts,tsx,mdx}\" --cache",
     "format:check": "prettier --check \"{app,lib,components}**/*.{ts,tsx,mdx}\" --cache"
   },
-  "engines": {
-    "node": "14.0",   
-    "npm": "6.0"     
-  },
   "dependencies": {
     "@radix-ui/react-alert-dialog": "^1.0.4",
     "@radix-ui/react-dialog": "^1.0.4",
