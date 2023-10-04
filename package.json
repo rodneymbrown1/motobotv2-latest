@@ -14,7 +14,7 @@
     "format:check": "prettier --check \"{app,lib,components}**/*.{ts,tsx,mdx}\" --cache"
   },
   "engines": {
-    "node": "18.16.0",   
+    "node": "14.0",   
     "npm": "6.0"     
   },
   "dependencies": {
