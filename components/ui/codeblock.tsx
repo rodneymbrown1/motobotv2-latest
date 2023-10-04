@@ -1,6 +1,6 @@
 // Inspired by Chatbot-UI and modified to fit the needs of this project
 // @see https://github.com/mckaywrigley/chatbot-ui/blob/main/components/Markdown/CodeBlock.tsx
-
+// @ts-nocheck 
 'use client'
 
 import { FC, memo } from 'react'
@@ -117,6 +117,7 @@ const CodeBlock: FC<Props> = memo(({ language, value }) => {
           </Button>
         </div>
       </div>
+        {/* @ts-ignore */}
       <SyntaxHighlighter
         language={language}
         style={coldarkDark}
@@ -136,6 +137,7 @@ const CodeBlock: FC<Props> = memo(({ language, value }) => {
         }}
       >
         {value}
+          {/* @ts-ignore */}
       </SyntaxHighlighter>
     </div>
   )

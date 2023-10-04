@@ -1,0 +1,16 @@
+import React from 'react';
+
+const WhyMotobotSection = () => {
+  return (
+    <section className="py-16 bg-gray-900">
+      <div className="container mx-auto text-center">
+        <h2 className="text-3xl font-semibold mb-6">Why Motobot?</h2>
+        <p className="text-lg mb-8">
+          In the rapidly evolving landscape of modern warfare, military personnel often face challenges in accessing accurate and timely information tailored to their specific needs. Existing solutions for answering military-specific questions fall short in leveraging state-of-the-art natural language processing (NLP) artificial intelligence (AI) capabilities. As a result, military branches experience limitations in maintaining technical superiority, productivity, speed, and problem-solving efficiency across a range of scenarios, both in garrison and on the field.
+        </p>
+      </div>
+    </section>
+  );
+};
+
+export default WhyMotobotSection;

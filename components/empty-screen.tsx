@@ -6,8 +6,8 @@ import { IconArrowRight } from '@/components/ui/icons'
 
 const exampleMessages = [
   {
-    heading: 'Explain technical concepts',
-    message: `What is a "serverless function"?`
+    heading: 'Explain a Marine Corps Order',
+    message: `Can you explain summarize MCO 1020.34h "?`
   },
   {
     heading: 'Summarize an article',
@@ -15,7 +15,7 @@ const exampleMessages = [
   },
   {
     heading: 'Draft an email',
-    message: `Draft an email to my boss about the following: \n`
+    message: `Draft an email to my company commander about the following: \n`
   }
 ]
 
@@ -23,17 +23,13 @@ export function EmptyScreen({ setInput }: Pick<UseChatHelpers, 'setInput'>) {
   return (
     <div className="mx-auto max-w-2xl px-4">
       <div className="rounded-lg border bg-background p-8">
-        <h1 className="mb-2 text-lg font-semibold">
-          Welcome to Next.js AI Chatbot!
+        <h1 className="text-lime-900 hover:text-lime-400 mb-2 text-lg font-semibold">
+          Example Prompts
         </h1>
-        <p className="mb-2 leading-normal text-muted-foreground">
-          This is an open source AI chatbot app template built with{' '}
-          <ExternalLink href="https://nextjs.org">Next.js</ExternalLink> and{' '}
-          <ExternalLink href="https://vercel.com/storage/kv">
-            Vercel KV
-          </ExternalLink>
-          .
-        </p>
+        {/* <p className="mb-2 leading-normal text-muted-foreground">
+          This is an AI chatbot app template using Open AI{' '}
+          <ExternalLink href="https://openai.com">Open AI</ExternalLink> and{' '}
+        </p> */}
         <p className="leading-normal text-muted-foreground">
           You can start a conversation here or try the following examples:
         </p>

@@ -1,7 +1,7 @@
 'use client'
 
 import { useChat, type Message } from 'ai/react'
-
+import camobg1 from '../public/camobg1.jpg'
 import { cn } from '@/lib/utils'
 import { ChatList } from '@/components/chat-list'
 import { ChatPanel } from '@/components/chat-panel'
@@ -49,7 +49,17 @@ export function Chat({ id, initialMessages, className }: ChatProps) {
       }
     })
   return (
-    <>
+    <>    
+    <div
+    className="absolute inset-0 z-[-1] h-full w-full bg-center "
+    style={{
+      
+      backgroundImage: `url(${camobg1.src})`,
+      backgroundSize: 'cover',
+       // Increase size by using 'cover'
+    }
+  }
+  ></div>
       <div className={cn('pb-[200px] pt-4 md:pt-10', className)}>
         {messages.length ? (
           <>
