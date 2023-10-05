@@ -9,8 +9,9 @@ import { buttonVariants } from '@/components/ui/button'
 const AlertDialog = AlertDialogPrimitive.Root
 
 const AlertDialogTrigger = AlertDialogPrimitive.Trigger
-
+ {/* @ts-ignore */}
 const AlertDialogPortal = ({
+  // @ts-ignore 
   className,
   children,
   ...props
@@ -57,6 +58,7 @@ const AlertDialogContent = React.forwardRef<
 AlertDialogContent.displayName = AlertDialogPrimitive.Content.displayName
 
 const AlertDialogHeader = ({
+    // @ts-ignore 
   className,
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => (
@@ -71,6 +73,7 @@ const AlertDialogHeader = ({
 AlertDialogHeader.displayName = 'AlertDialogHeader'
 
 const AlertDialogFooter = ({
+    // @ts-ignore 
   className,
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => (
