@@ -1,7 +1,8 @@
 
 import Image from 'next/image';
 import motologo from '../../public/newmoto.png'
-import homeBackground from '../../public/homeBackground.jpg'
+import homeBackground from '../../public/homebackground.jpg'
+
 export default function Hero () {
     return ( <section className=" ">
     <section className="hero relative">
