@@ -154,7 +154,7 @@ export function SidebarActions({
                     toast.error(result.error)
                     return
                   }
-
+                   {/* @ts-ignore */}
                   copyShareLink(result)
                 })
               }}
