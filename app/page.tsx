@@ -12,7 +12,7 @@ export default async function IndexPage() {
   if (session) {
     // console.log("Session from header:" + JSON.stringify(session))
 
-    console.log("session.user" + JSON.stringify(session.user))
+    // console.log("session.user" + JSON.stringify(session.user))
   }
   if (session?.user) {
     return <Chat id={id} />
