@@ -3,11 +3,17 @@ import { Chat } from '@/components/chat'
 import { auth } from '@/auth'
 import Hero from '@/components/site/hero'
 export const runtime = 'edge'
+import axios from 'axios';
 
 export default async function IndexPage() {
   const id = nanoid()
   const session = await auth()
-  // redirect to home if user is already logged in
+
+  if (session) {
+    // console.log("Session from header:" + JSON.stringify(session))
+
+    console.log("session.user" + JSON.stringify(session.user))
+  }
   if (session?.user) {
     return <Chat id={id} />
   }
