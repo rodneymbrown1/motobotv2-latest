@@ -26,6 +26,7 @@
     "@vercel/kv": "^0.2.1",
     "@vercel/og": "^0.5.7",
     "ai": "^2.1.6",
+    "axios": "^1.5.1",
     "class-variance-authority": "latest",
     "clsx": "^1.2.1",
     "focus-trap-react": "^10.1.1",
