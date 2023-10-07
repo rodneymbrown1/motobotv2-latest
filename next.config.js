@@ -4,6 +4,7 @@ module.exports = {
   experimental: {
     serverActions: true,
   },
+  basePath: '/docs',
   images: {
     domains: ['lh3.googleusercontent.com'], 
     remotePatterns: [
