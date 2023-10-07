@@ -4,7 +4,7 @@ import { auth } from '@/auth'
 import Hero from '@/components/site/hero'
 export const runtime = 'edge'
 import axios from 'axios';
-
+import RoadMapPage from '@/components/site/roadmap'
 export default async function IndexPage() {
   const id = nanoid()
   const session = await auth()
@@ -19,7 +19,9 @@ export default async function IndexPage() {
   }
 
   return (
+    <div>
    <Hero/>
+   <RoadMapPage/></div>
   );
   
 }

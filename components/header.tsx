@@ -1,6 +1,5 @@
 import * as React from 'react'
 import Link from 'next/link'
-
 import { cn } from '@/lib/utils'
 import { auth } from '@/auth'
 import { clearChats } from '@/app/actions'
@@ -68,6 +67,10 @@ export async function Header() {
          <a 
         href="/home">
          <span> Home</span>
+        </a>
+        <a 
+        href="/roadmap">
+         <span> Roadmap</span>
         </a>
         <a
           href="/documentation"
