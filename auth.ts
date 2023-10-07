@@ -38,6 +38,7 @@ export const {
       return !!auth?.user // this ensures there is a logged in user for -every- request
     }
   },
+  debug: true,
 
   pages: {
     signIn: '/sign-in' // overrides the next-auth default signin page https://authjs.dev/guides/basics/pages
