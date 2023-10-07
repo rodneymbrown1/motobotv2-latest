@@ -24,7 +24,7 @@ const RoadMapPage = () => {
 {/* Phase 1     */}
 <div className="max-w-lg container content-center">
 <div>
-    <p className="text-3xl font-bold py-10">Phase 1 - LLM Foundation</p>
+    <p className="text-3xl font-bold py-10">Phase 1 - LLM API Foundation</p>
 
 
 
