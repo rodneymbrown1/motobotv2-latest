@@ -1,5 +1,5 @@
 import NextAuth, { type DefaultSession } from 'next-auth'
-import GitHub from 'next-auth/providers/github';
+import GitHubProvider from 'next-auth/providers/github';
 import Google from 'next-auth/providers/google';
 
 declare module 'next-auth' {
@@ -17,7 +17,10 @@ export const {
   CSRF_experimental // will be removed in future
 } = NextAuth({
   providers: [
-    GitHub, 
+    GitHubProvider({
+      clientId: process.env.GITHUB_ID,
+      clientSecret: process.env.GITHUB_SECRET
+    }), 
     Google({
     clientId: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
