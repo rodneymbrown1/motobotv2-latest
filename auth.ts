@@ -19,11 +19,12 @@ export const {
   providers: [
     GitHubProvider({
       clientId: process.env.GITHUB_ID,
-      clientSecret: process.env.GITHUB_SECRET
+      clientSecret: process.env.GITHUB_SECRET,
     }), 
     GoogleProvider({
     clientId: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+
   })],
 
   callbacks: {
@@ -41,6 +42,7 @@ export const {
   debug: true,
 
   pages: {
-    signIn: '/sign-in' // overrides the next-auth default signin page https://authjs.dev/guides/basics/pages
+    signIn: '/sign-in',
+     // overrides the next-auth default signin page https://authjs.dev/guides/basics/pages
   }
 })
