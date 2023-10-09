@@ -26,7 +26,7 @@ export function LoginButton2({
       onClick={() => {
         setIsLoading(true)
         // next-auth signIn() function doesn't work yet at Edge Runtime due to usage of BroadcastChannel
-        signIn('google', { callbackUrl: `/` })
+        signIn('google', { callbackUrl: `${process.env.NEXT_PUBLIC_APP_URL}/api/auth/callback/google`})
       }}
       disabled={isLoading}
       className="bg-lime-900 hover:bg-lime-400"
