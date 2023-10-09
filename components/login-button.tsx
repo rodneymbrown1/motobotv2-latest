@@ -13,11 +13,14 @@ interface LoginButtonProps extends ButtonProps {
 }
 
 export function LoginButton({
+  
   text = 'Login with GitHub',
   showGithubIcon = true,
   className,
   ...props
 }: LoginButtonProps) {
+  console.log('NEXT_PUBLIC_APP_URL:', process.env.NEXT_PUBLIC_APP_URL);
+
   const [isLoading, setIsLoading] = React.useState(false)
   return (
     <Button 
