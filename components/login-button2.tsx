@@ -1,8 +1,8 @@
 'use client'
-
+import Image from 'next/image';
+import GoogleIcon from '../public/googleicon.png'
 import * as React from 'react'
 import { signIn } from 'next-auth/react'
-
 import { cn } from '@/lib/utils'
 import { Button, type ButtonProps } from '@/components/ui/button'
 import { IconGitHub, IconSpinner } from '@/components/ui/icons'
@@ -35,7 +35,14 @@ export function LoginButton2({
       {isLoading ? (
         <IconSpinner className="mr-2 animate-spin" />
       ) : showGoogleIcon ? (
-        <IconGitHub className="mr-2" />
+        <div className="mx-2">
+        <Image
+        priority
+        src={GoogleIcon}
+        alt="System Overview"
+        width={15}
+        height={15}
+      /></div>
       ) : null}
       {text}
     </Button>
