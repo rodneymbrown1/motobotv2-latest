@@ -1,4 +1,5 @@
-import React from 'react';
+'use client'
+import React, { useState } from 'react';
 import { FooterText } from '@/components/footer';
 import Image from 'next/image';
 import sys_design from '../../public/sys_design.jpg'
@@ -13,22 +14,35 @@ import User from '../../public/Picture13.png'
 import UserInput from '../../public/Picture12.png'
 import Phone from '../../public/smartphone.png'
 import Scale from '../../public/Picture4.jpg'
+import { useInView } from 'react-intersection-observer';
+
 const RoadMapPage = () => {
+var [ElementIsVisible=false, setElementIsVisible] = useState();
+var { ref:phase1ref, inView:phase1refIsVisible} = useInView();
+var { ref:phase2ref, inView:phase2refIsVisible} = useInView();
+var { ref:phase3ref, inView:phase3refIsVisible} = useInView();
+var { ref:phase4ref, inView:phase4refIsVisible} = useInView();
+var { ref:phase5ref, inView:phase5refIsVisible} = useInView();
+
+console.log(phase1refIsVisible);
+
   return (
     
 <div className="bg-black text-white">
+
+{/* Title */}
 <div className="mx-40">
 <h1 className="text-8xl text-center font-bold py-20">Motobot Roadmap</h1>
 </div>
 
 {/* Phase 1     */}
 <div className="max-w-lg container content-center">
-<div>
+
     <p className="text-3xl font-bold py-10">Phase 1 - LLM API Foundation</p>
 
 
-
-    <div className="flex flex-row py-10">
+    <div id="phase1ref" ref={phase1ref} className={`$_hidden ${phase1refIsVisible? '_show' : '_hidden'}`}>
+    <div className="flex flex-row py-10 text-focus-in">
     <Image
               priority
               src={IconSearch}
@@ -63,9 +77,13 @@ const RoadMapPage = () => {
 </p>
 
     </div>
-    </div>
+</div>
+   
+
     </div>
 <br/><br/><br/><br/>
+
+
 {/* Phase 2 */}
 <div>
     <p className="text-3xl font-bold py-30 text-center">Phase 2 – Dynamic Web Crawling</p>
@@ -79,7 +97,8 @@ const RoadMapPage = () => {
               height={1000}
             />
     </div>
-    <div>
+    <div id="phase2ref" ref={phase2ref} className={`$_hidden ${phase2refIsVisible? '_show' : '_hidden'}`}>
+<div>
 <ol className="flex flex-col content-center text-xl p-10  lg:p-40 lg:text-2xl">
     <li>Integrate Evidence Based Data Sources</li>
     <br/>
@@ -94,10 +113,12 @@ const RoadMapPage = () => {
 </li>
 <br/>
 </ol>
-
+</div>
     </div>
     </div>
  </div>
+
+
 {/* Phase 3 */}
 <div>
     <div className="relative">
@@ -111,7 +132,7 @@ const RoadMapPage = () => {
             <div className="absolute top-1/2 ">
             <div className="flex flex-col  content-center align-center">
 <p className="text-3xl font-bold py-30 ">Phase 3 – Fine Tune Data Fetching</p>   
-<div>
+<div id="phase3ref" ref={phase3ref} className={`$_hidden ${phase3refIsVisible? '_show' : '_hidden'}`}>
 <ol className="flex flex-col content-center text-xl p-10  lg:p-40 lg:text-2xl">
     <li>Fine tune the web crawling processes</li>
     <li>Fine tune the prompt engineering process
@@ -124,15 +145,17 @@ const RoadMapPage = () => {
 
 </div>     
     
-    
     </div>
+    </div>
+
 
 {/* Phase 4 */}
 <div className="flex justify-between flex-row py-40">
 <div>
     <p className="text-3xl font-bold py-10">Phase 4 – Testing and User Study</p>
-
+    <div id="phase4ref" ref={phase4ref} className={`$_hidden ${phase4refIsVisible? '_show' : '_hidden'}`}>
     <div className="flex flex-row flex-start py-10">
+
     <Image
               priority
               src={User}
@@ -156,7 +179,7 @@ const RoadMapPage = () => {
 
 </p>
     </div>
-
+</div>
 
 
   
@@ -174,10 +197,12 @@ const RoadMapPage = () => {
 </div>
     </div>
 
+
 {/* Phase 5 */}
 <div className="flex justify-between flex-row-reverse py-40">
 <div>
     <p className="text-3xl font-bold py-10">Phase 5 – Optimization and Scaling</p>
+    <div id="phase5ref" ref={phase5ref} className={`$_hidden ${phase5refIsVisible? '_show' : '_hidden'}`}>
     <ol className="flex flex-col content-center text-xl p-10  lg:p-40 lg:text-2xl">
     <li>Integrate Evidence Based Data Sources</li>
     <br/>
@@ -192,7 +217,7 @@ const RoadMapPage = () => {
 </li>
 <br/>
 </ol>
- 
+ </div>
 
 
 
@@ -210,14 +235,8 @@ const RoadMapPage = () => {
 
 </div>
     </div>
-
-
-
-
-</div>
- 
     
-</div>
+</div>    
   );
 };
 
