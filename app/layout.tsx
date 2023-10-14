@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     canonical: '/',
     languages: {
       'en-US': '/en-US',
-      'de-DE': '/de-DE',
+      'de-DE': '/de-D]4E',
     },
   },
   description: 'An AI-powered chatbot from Devpro LLC',
