@@ -1,6 +1,6 @@
 import NextAuth, { type DefaultSession } from 'next-auth'
-import GitHub from 'next-auth/providers/github';
-import Google from 'next-auth/providers/google';
+import GithubProvider from 'next-auth/providers/github';
+import GoogleProvider from 'next-auth/providers/google';
 
 declare module 'next-auth' {
   interface Session {
@@ -17,8 +17,14 @@ export const {
   CSRF_experimental // will be removed in future
 } = NextAuth({
   providers: [
-    GitHub, 
-    Google],
+    GithubProvider({
+      clientId: process.env.GITHUB_ID,
+      clientSecret: process.env.GITHUB_SECRET,
+    }),
+    GoogleProvider({
+      clientId: process.env.GOOGLE_ID,
+      clientSecret: process.env.GOOGLE_SECRET,
+    }),],
 
   callbacks: {
     async redirect({ url, baseUrl }) {
@@ -38,12 +44,6 @@ export const {
     authorized({ auth }) {
       return !!auth?.user // this ensures there is a logged in user for -every- request
     },
-    
   },
   debug: true,
-
-  pages: {
-    signIn: '/sign-in',
-     // overrides the next-auth default signin page https://authjs.dev/guides/basics/pages
-  }
 })
