@@ -14,6 +14,14 @@ export const metadata: Metadata = {
     default: 'Motobot AI',
     template: `%s - Motobot AI`
   },
+  metadataBase: new URL('https://motobotv2-db74824bc716.herokuapp.com'),
+  alternates: {
+    canonical: '/',
+    languages: {
+      'en-US': '/en-US',
+      'de-DE': '/de-DE',
+    },
+  },
   description: 'An AI-powered chatbot from Devpro LLC',
   themeColor: [
     { media: '(prefers-color-scheme: light)', color: 'white' },

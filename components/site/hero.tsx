@@ -1,7 +1,8 @@
-
+'use client'
 import Image from 'next/image';
 import motologo from '../../public/newmoto.png'
 import homeBackground from '../../public/homebackground.jpg'
+import { useSession, signIn, signOut } from "next-auth/react"
 
 export default function Hero () {
     return ( <section className=" ">
@@ -33,9 +34,7 @@ export default function Hero () {
                <p className="bg-gray-900 text-lg mb-8 text-white font-courier">
                  Motobot is your dedicated AI companion designed to assist and support military personnel. Stay up-to-date with evidence-based data, mission information, and tactical insights 24/7.
                </p>
-   <a href="/sign-in?callbackUrl=/">
-             <p className="z-11 text-lg bg-lime-900 hover:bg-lime-600 text-white py-2 px-6 rounded-full transition duration-300 ease-in-out transform hover:scale-105"> Get Started</p>
-             </a>
+               <button onClick={() => signIn()}>Sign in</button>
                <br/>
                <br/>
                <br/>
