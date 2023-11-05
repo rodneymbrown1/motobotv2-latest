@@ -29,7 +29,7 @@ export function LoginButton({
       onClick={() => {
         setIsLoading(true)
         // next-auth signIn() function doesn't work yet at Edge Runtime due to usage of BroadcastChannel
-        signIn('github', { callbackUrl: `https://motobotv2-db74824bc716.herokuapp.com/` })
+        signIn('github', { callbackUrl: `/` })
       }}
       disabled={isLoading}
       className="bg-lime-900 hover:bg-lime-400"
