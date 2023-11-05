@@ -26,17 +26,20 @@ export const {
       clientSecret: process.env.GOOGLE_SECRET,
     }),],
 
-  callbacks: {
-    jwt({ token, profile }) {
-      if (profile) {
-        token.id = profile.id
-        token.image = profile.avatar_url || profile.picture
+    callbacks: {
+      jwt({ token, profile }) {
+        if (profile) {
+          token.id = profile.id
+          token.image = profile.avatar_url || profile.picture
+        }
+        return token
+      },
+      authorized({ auth }) {
+        return !!auth?.user // this ensures there is a logged in user for -every- request
       }
-      return token
     },
-    authorized({ auth }) {
-      return !!auth?.user // this ensures there is a logged in user for -every- request
-    },
-  },
-  debug: true,
-})
+    pages: {
+      signIn: '/sign-in' // overrides the next-auth default signin page https://authjs.dev/guides/basics/pages
+    }
+  })
+  
