@@ -33,7 +33,7 @@ export function securityMiddleware(request: NextRequest) {
 export default securityMiddleware;
 
 export const config = {
-  matcher: ['/((?!api|_next/static|_next/image|favicon.ico|roadmap|about|home).*)']
+  matcher: ['/((?!api|_next/static|_next/image|favicon.ico|roadmap|about|home|documentation).*)']
 }
 
 
