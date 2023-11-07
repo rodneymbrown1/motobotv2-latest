@@ -6,7 +6,7 @@ import { getSharedChat } from '@/app/actions'
 import { ChatList } from '@/components/chat-list'
 import { FooterText } from '@/components/footer'
 
-// export const runtime = 'edge'
+export const runtime = 'edge'
 export const preferredRegion = 'home'
 
 interface SharePageProps {
@@ -15,7 +15,7 @@ interface SharePageProps {
   }
 }
 
-export async function generateMetadata({
+export async function generatedata({
   params
 }: SharePageProps): Promise<Metadata> {
   const chat = await getSharedChat(params.id)
