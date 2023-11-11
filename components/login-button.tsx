@@ -13,27 +13,23 @@ interface LoginButtonProps extends ButtonProps {
 }
 
 export function LoginButton({
-  
-  text = 'Login with GitHub',
-  showGithubIcon = true,
+  text = 'Get Started',
+  showGithubIcon = false,
   className,
   ...props
 }: LoginButtonProps) {
-  console.log('NEXT_PUBLIC_APP_URL:', process.env.NEXT_PUBLIC_APP_URL);
-
   const [isLoading, setIsLoading] = React.useState(false)
   return (
-    <Button 
-    size="lg"
+    <Button
       variant="outline"
       onClick={() => {
         setIsLoading(true)
-        // next-auth signIn() function doesn't work yet at Edge Runtime due to usage of BroadcastChannel
+        // next-auth signIn() function doesn't work yet at  Runtime due to usage of BroadcastChannel
         signIn('github', { callbackUrl: `/` })
       }}
       disabled={isLoading}
-      className="bg-lime-900 hover:bg-lime-400"
-      {...props}
+      className="text-2xl text-black animate-bounce bg-white h-70"
+ 
     >
       {isLoading ? (
         <IconSpinner className="mr-2 animate-spin" />

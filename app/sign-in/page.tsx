@@ -8,6 +8,7 @@ export default async function Home () {
 const session = await auth()
 // redirect to home if user is already logged in
 if (session?.user) {
+// console.log("Session object: " + JSON.stringify(session))
   redirect('/')
 } 
     return (<div>

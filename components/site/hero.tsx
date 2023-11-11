@@ -3,7 +3,7 @@ import Image from 'next/image';
 import motologo from '../../public/newmoto.png'
 import homeBackground from '../../public/homebackground.jpg'
 import { useSession, signIn, signOut } from "next-auth/react"
-
+import { LoginButton } from '../login-button';
 export default function Hero () {
     return ( <section className=" ">
     <section className="hero relative">
@@ -34,7 +34,7 @@ export default function Hero () {
                <p className="bg-gray-900 text-lg mb-8 text-white font-courier">
                  Motobot is your dedicated AI companion designed to assist and support military personnel. Stay up-to-date with evidence-based data, mission information, and tactical insights 24/7.
                </p>
-               <button onClick={() => signIn()}>Sign in</button>
+              <LoginButton/>
                <br/>
                <br/>
                <br/>
