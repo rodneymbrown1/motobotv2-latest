@@ -24,14 +24,14 @@ var { ref:phase3ref, inView:phase3refIsVisible} = useInView();
 var { ref:phase4ref, inView:phase4refIsVisible} = useInView();
 var { ref:phase5ref, inView:phase5refIsVisible} = useInView();
 
-console.log(phase1refIsVisible);
+// console.log(phase1refIsVisible);
 
   return (
-    
-<div className="bg-black text-white">
+    <div>
+<div className="bg-black text-white ">
 
 {/* Title */}
-<div className="mx-40">
+<div className="mx-40 py-20">
 <h1 className="text-8xl text-center font-bold py-20">Motobot Roadmap</h1>
 </div>
 
@@ -120,13 +120,13 @@ console.log(phase1refIsVisible);
 
 
 {/* Phase 3 */}
-<div>
-    <div className="relative">
+<div className="flex flex-row">
+    <div className="relative w-full">
     <Image
               priority
               src={FineTune}
               alt="System Overview"
-              width={1000}
+              width={2000}
               height={1000}
             />
             <div className="absolute top-1/2 ">
@@ -236,7 +236,7 @@ console.log(phase1refIsVisible);
 </div>
     </div>
     
-</div>    
+</div>    </div>
   );
 };
 
