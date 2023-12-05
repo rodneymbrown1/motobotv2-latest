@@ -32,7 +32,7 @@ var { ref:phase5ref, inView:phase5refIsVisible} = useInView();
 
 {/* Title */}
 <div className="mx-40 py-20">
-<h1 className="text-8xl text-center font-bold py-20">Motobot Roadmap</h1>
+<h1 className="text-4xl text-center font-bold py-20 lg:text-8xl">Motobot Roadmap</h1>
 </div>
 
 {/* Phase 1     */}
