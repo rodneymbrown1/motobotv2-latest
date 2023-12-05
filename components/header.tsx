@@ -40,7 +40,7 @@ export async function Header() {
           </Sidebar>
         ) : (
           <Link href="/" target="_blank" rel="nofollow">
-          www.motobot.dev
+         
                     </Link>
         )}
         <div className="flex items-center">
